@@ -131,7 +131,7 @@ col3.metric("Total Penyewa Casual", f"{total_casual:,.0f}")
 st.divider()
 
 # --- VISUALIZATION 1: HOURLY RENTAL PATTERNS ---
-st.subheader("1. Pola Penyewaan Sepeda Per Jam: Casual vs Registered")
+st.subheader("1. Pola Penyewaan Sepeda Per Jam: Casual vs Registered pada 2011-2012")
 
 if not filtered_df.empty and "hr" in filtered_df.columns:
     hourly_df = (
@@ -307,6 +307,7 @@ with st.expander("Selengkapnya (Insight Musim & Suhu)"):
       musim untuk mengetahui perbedaan tingkat permintaan.
     - **Korelasi Suhu:** Grafik sebar dan garis tren membantu mengamati
       hubungan antara suhu udara (`temp`) dan jumlah penyewaan.
+    - Berdasarkan analisis visual dan statistik, Musim Gugur (Fall) dan Musim Panas (Summer) merupakan periode puncak penyewaan sepeda dengan rata-rata harian tertinggi (masing-masing 5.644 dan 4.992 unit) yang didorong oleh korelasi positif kuat terhadap suhu udara yang lebih hangat (skala normalisasi 0,6–0,8).
     """)
 
 st.divider()
@@ -377,6 +378,8 @@ with st.expander("Selengkapnya (Insight Kategori Permintaan)"):
 
     Kategori ini membantu menunjukkan frekuensi setiap tingkat permintaan
     selama periode yang dipilih.
+
+    - Dominasi Tingkat Permintaan: Sebagian besar hari operasional berada pada kategori Medium Demand ($3.000–6.000$ penyewaan) dan High Demand ($>6.000$ penyewaan), yang menunjukkan bahwa tingkat penggunaan armada sepeda tergolong tinggi dan stabil secara harian.
     """)
 
 # --- FOOTER ---
